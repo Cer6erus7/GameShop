@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{product.name}}{% endblock %}
+
+{% block content %}
+  <body>           
+	    <div class="main-container ">
+	      <div class="banner">
+	          <div class="row">
+	            <div class="col-12 logo">
+	                <img src="{% static 'image/logo.png' %}" class="img-fluid" alt="">
+	            </div>
+	          </div>
+	          <div class="row"> 
+	              <div class="col-lg-6 banner-content ">
+	                  <img width="500" src="{{ product.image.url }}" class="img-fluid" alt="">
+	              </div> 
+	              <div class="col-lg-6 content">
+	                <h1>{{ product.name }}</h1>
+	                <h3> {{ product.price }} $</h3>
+	                <p> {{ product.description }}</p>
+	                <div class="butns">
+	                  <button class="get-btn">GET IT NOW</button>
+	                </div>
+	              </div>    
+	          </div>     
+	      </div>  
+	    </div>
+{% endblock %}
